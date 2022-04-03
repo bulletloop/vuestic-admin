@@ -1,0 +1,28 @@
+version: "0.0.1-alpha"
+required:
+  - "vuestic"
+sync:
+  service: "vuestic"
+  destination: "/app/"
+  directories:
+    include:
+      - "."
+    exclude:
+      - node_modules/
+      - docs/
+      - log/
+services:
+  - docker:
+      name: "vuestic"
+      githubRepo: bulletloop/vuestic-admin
+      defaultBranch: "main"
+      dockerfile: Dockerfile.looper
+      image: vuestic
+      public: true
+      port: 8080
+      replicas: 1
+      resources:
+        memory_request: 500Mi
+        memory_limit: 500Mi
+        cpu_request: 50m
+        cpu_limit: 1000m
