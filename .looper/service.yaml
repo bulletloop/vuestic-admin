@@ -2,7 +2,7 @@ version: "0.0.1-alpha"
 required:
   - "vuestic"
 imports:
-  - githubRepo: bulletloop/vuestic
+  - githubRepo: bulletloop/vuestic-admin
     ref: main
 sync:
   service: "vuestic"
@@ -17,7 +17,7 @@ sync:
 services:
   - docker:
       name: "vuestic"
-      githubRepo: bulletloop/vuestic
+      githubRepo: bulletloop/vuestic-admin
       defaultBranch: "main"
       dockerfile: Dockerfile.looper
       image: vuestic
