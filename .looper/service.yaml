@@ -1,9 +1,6 @@
 version: "0.0.1-alpha"
 required:
   - "vuestic"
-imports:
-  - githubRepo: bulletloop/vuestic-admin
-    ref: main
 sync:
   service: "vuestic"
   destination: "/app/"
